@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;  /* include padding and border in the elements width/size */
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: column;
+    margin: 0;
+    background-color: lightsalmon;
+  }
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: blue
+  }
+  .nav {
+    resize: horizontal;
+    overflow: auto;
+    background-color: aqua
+  }
+  .lab {
+    flex: 1;
+    /* flex: 1 1 auto;    /* fills remaining space; flex: 1 1 auto = flex: 1; prevents resize */
+    background-color: lightgray;
+  }
+  .header, .footer {
+    flex: 0 1 auto;   /*sized to content */
+    background: yellowgreen;
+  }
+  .header, .footer {
+    padding: 1;
+  }

@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;  /* include padding and border in the elements width/size */
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: column;
+    margin: 0;
+    background-color: lightsalmon;
+  }
+  .header, .footer {
+    flex: 0 1 auto;   /*sized to content */
+    background: yellowgreen;
+  }
+  .header, .footer {
+    padding: 1;
+    border: 1px solid black;
+  }
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: red
+  }
+  .nav {
+    resize: horizontal;
+    overflow: auto;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    background-color: lavender;
+    border: 1px solid black;
+  }
+  .lab {
+    display: flex;
+    flex-direction: row;
+    flex: 1;                 /* fills remaining space; flex: 1 1 auto = flex: 1; prevents resize */
+    background-color: lightgray;
+  }
+  .labBench {
+    background-color: lightgoldenrodyellow;
+    flex: 1;
+    border: 1px solid black;
+  }
+  .labInfo {
+    background: beige;
+    flex: 0 1 150px;          /* flex: 0 1 40px; is fixed height */
+    border: 1px solid black;
+  }
+.freezer{
+  border: 1px solid black;
+  flex:1;
+}
+.wrapper{
+  margin: 10% auto;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+label{
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid black;
+  border-bottom: none;
+}
+label:hover{
+  background: paleturquoise;
+}
+label.last{
+  border-bottom: 1px solid #fff;
+}
+ul ul li{
+  padding: 10px;
+  background: lavenderblush;
+}
+input[type="checkbox"]{
+  position: absolute;
+  left: -9999px;
+}
+input[type="checkbox"] ~ ul{
+  height: 0;
+  transform: scaleY(0);
+}
+input[type="checkbox"]:checked ~ ul{
+  height: 100%;
+  transform-origin: top;
+  transition: transform .2s ease-out;
+  transform: scaleY(1); 
+}
+input[type="checkbox"]:checked + label{
+  background: lemonchiffon;
+  border-bottom: 1px solid black;
+}
+.trash{
+  flex: 0 1 40px;
+  background: papayawhip;
+}

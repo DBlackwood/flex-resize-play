@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Avida-ED 4</title>
+  <meta charset='utf-8'/>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+
+<style>
+  @import 'avidaEdEco.css';
+</style>
+</head>
+<body>
+  <div class="header">Header</div>
+  <div class="main">
+    <div class="nav">
+      <div class="freezer">
+        <h3>Freezer</h3>
+        <div class="wrapper">
+            <ul>
+              <li>
+                <input type="checkbox" id="cDish" checked="true"/>
+                <label for="cDish" class="first">Configured Dishes</label>
+                <ul>
+                  <li>@default</li>
+                  <li>nan_only</li>
+                </ul>
+              </li>
+              <li>
+                  <input type="checkbox" id="organisms" checked="true"/>
+                  <label for="organisms" >Organsism</label>
+                  <ul>
+                    <li>@ancestor</li>
+                    <li>@all_functions</li>
+                  </ul>
+              </li>
+              <li>
+                  <input type="checkbox" id="pDish" checked="true"/>
+                  <label for="pDish" class="last">Populated Dishes</label>
+                  <ul>
+                    <li>@example</li>
+                    <li>@nan@100updates</li>
+                  </ul>
+              </li>
+            </ul>
+          </div>
+  
+      </div>
+      <div class="trash">
+        trash
+      </div>
+    </div>
+    <div class=lab>
+        <div class="labBench">Bench</div>
+        <div class="labInfo">info</div>
+      </div>
+  </div>
+</body>

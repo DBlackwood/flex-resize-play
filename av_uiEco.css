@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;  /* include padding and border in the elements width/size */
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: column;
+    margin: 0;
+    background-color: lightsalmon;
+  }
+  .main {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    background-color: blue
+  }
+  .nav {
+    flex: 0 1 165px;
+    resize: horizontal;
+    overflow: auto;
+    background-color: aqua
+  }
+  .lab {
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+    /* flex: 1 1 auto;    /* fills remaining space; same as flex: 1; prevents resize */
+    background-color: lightgray;
+  }
+  .labBench {
+    background-color: brown;
+    flex: 1;
+  }
+  .labInfo {
+    background: beige;
+    flex: 0 1 150px;
+  }
+  .header, .footer {
+    flex: 0 1 auto;   /*sized to content */
+    background: yellowgreen;
+  }
+  .header, .footer {
+    padding: 1;
+  }
