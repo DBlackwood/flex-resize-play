@@ -10,7 +10,7 @@
     background-color: lightsalmon;
   }
   .header, .footer {
-    flex: 0 1 auto;   /*sized to content */
+    flex: 0 1 20px;   /*sized to content */
     background: yellowgreen;
   }
   .header, .footer {
@@ -44,16 +44,49 @@
     border: 1px solid black;
   }
   .labInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 450px;          /* flex: 0 1 40px; is fixed height */
+    border: 1px solid black;
     background: beige;
-    flex: 0 1 150px;          /* flex: 0 1 40px; is fixed height */
+  }
+  #Statistics{
+    display: flex;
+    border: 1px solid black;
+    height: 450px;
+    resize: vertical;
+    overflow: auto;
+  }
+  #Selected{
+    border: 1px solid black;
+    resize: horizontal;
+    overflow: auto;
+  }
+  #posStats{
+    flex: 1; 
+    border: 1px solid black;
+  }
+  #miniChart{
+    flex: 1;
+    border: 1px solid black;
+  }
+  #miniChartYaxis{
+    flex: 0 1 30px;
     border: 1px solid black;
   }
 .freezer{
   border: 1px solid black;
   flex:1;
 }
+.iceWrap{
+  margin: 10px;
+}
 .wrapper{
-  margin: 10% auto;
+  margin: 1% auto;
+}
+.freezerSection{
+  font-size: 130%;
+  background-color: rgb(215, 215, 248);
 }
 ul{
   list-style: none;
@@ -63,7 +96,7 @@ ul{
 label{
   display: block;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid black;
   border-bottom: none;
 }
@@ -97,5 +130,4 @@ input[type="checkbox"]:checked + label{
 }
 .trash{
   flex: 0 1 40px;
-  background: papayawhip;
 }

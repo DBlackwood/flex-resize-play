@@ -10,40 +10,64 @@
 </style>
 </head>
 <body>
-  <div class="header">Header</div>
+  <div class="header">Avida-ED File Freezer Control Help  | Workspace: default</div>
   <div class="main">
     <div class="nav">
       <div class="freezer">
         <h3>Freezer</h3>
         <div class="wrapper">
+          <ul>
+            <li>
+              <input type="checkbox" id="cDish" checked="true"/>
+              <label for="cDish" class="first">Configured Dishes</label>
+              <ul>
+                <li>@default</li>
+                <li>nan_only</li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" id="organisms" checked="true"/>
+              <label for="organisms" >Organsism</label>
+              <ul>
+                <li>@ancestor</li>
+                <li>@all_functions</li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" id="pDish" checked="true"/>
+              <label for="pDish" class="last">Populated Dishes</label>
+              <ul>
+                <li>@example</li>
+                <li>@nan@100updates</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <div class="iceWrap">
+          <h3>Icebox</h3>
+          <details>
+            <summary class="freezerSection">Configured Dishes</summary>
             <ul>
-              <li>
-                <input type="checkbox" id="cDish" checked="true"/>
-                <label for="cDish" class="first">Configured Dishes</label>
-                <ul>
-                  <li>@default</li>
-                  <li>nan_only</li>
-                </ul>
-              </li>
-              <li>
-                  <input type="checkbox" id="organisms" checked="true"/>
-                  <label for="organisms" >Organsism</label>
-                  <ul>
-                    <li>@ancestor</li>
-                    <li>@all_functions</li>
-                  </ul>
-              </li>
-              <li>
-                  <input type="checkbox" id="pDish" checked="true"/>
-                  <label for="pDish" class="last">Populated Dishes</label>
-                  <ul>
-                    <li>@example</li>
-                    <li>@nan@100updates</li>
-                  </ul>
-              </li>
+              <li>@default</li>
+              <li>nan_only</li>
             </ul>
-          </div>
-  
+          </details>
+          <details>
+            <summary class="freezerSection">Organsims</summary>
+            <ul>
+              <li>@ancestor</li>
+              <li>@all_functions</li>
+            </ul>
+          </details>
+          <details>
+            <summary class="freezerSection">Populated Dishes</summary>
+            <ul>
+              <li>@example</li>
+              <li>nan_only@100updates</li>
+            </ul>
+          </details>
+        </div>
       </div>
       <div class="trash">
         trash
@@ -51,7 +75,14 @@
     </div>
     <div class=lab>
         <div class="labBench">Bench</div>
-        <div class="labInfo">info</div>
+        <div class="labInfo">info
+          <div id="Statistics">
+            <div id="Selected">Selected Organsim Type</div>
+            <div id="popStats">Population Statistics</div>
+          </div>
+          <div id="miniChart">A chart should be here</div>
+          <div id="miniChartYaxis">Y-axis selection goes here</div>
+        </div>
       </div>
   </div>
 </body>
