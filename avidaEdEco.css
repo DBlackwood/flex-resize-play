@@ -52,6 +52,7 @@
   }
   #Statistics{
     display: flex;
+    flex-direction: row;
     border: 1px solid black;
     height: 450px;
     resize: vertical;
@@ -74,6 +75,12 @@
     flex: 0 1 30px;
     border: 1px solid black;
   }
+.mainPageButtons{
+  border: 1px solid black;
+  flex:0 1 120px;
+  resize: vertical;     /* broken: resize is not working here */
+  overflow: auto;
+}
 .freezer{
   border: 1px solid black;
   flex:1;
@@ -81,53 +88,11 @@
 .iceWrap{
   margin: 10px;
 }
-.wrapper{
-  margin: 1% auto;
-}
 .freezerSection{
   font-size: 130%;
   background-color: rgb(215, 215, 248);
 }
-ul{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-label{
-  display: block;
-  cursor: pointer;
-  padding: 5px;
-  border: 1px solid black;
-  border-bottom: none;
-}
-label:hover{
-  background: lightgray;
-}
-label.last{
-  border-bottom: 1px solid black;
-}
-ul ul li{
-  padding: 10px;
-  background: lavenderblush;
-}
-input[type="checkbox"]{
-  position: absolute;
-  left: -9999px;
-}
-input[type="checkbox"] ~ ul{
-  height: 0;
-  transform: scaleY(0);
-}
-input[type="checkbox"]:checked ~ ul{
-  height: 100%;
-  transform-origin: top;
-  transition: transform .2s ease-out;
-  transform: scaleY(1); 
-}
-input[type="checkbox"]:checked + label{
-  background: lemonchiffon;
-  border-bottom: 1px solid black;
-}
 .trash{
   flex: 0 1 40px;
 }
+
